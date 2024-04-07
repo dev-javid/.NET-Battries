@@ -1,0 +1,36 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Domain</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Domain</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Domain.csproj" File="Domain.csproj" ReplaceParameters="true">
+      <Folder Name="Common" TargetFolderName="Common">
+        <Folder Name="ValueObjects" TargetFolderName="ValueObjects">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Email.cs">Email.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="FileName.cs">FileName.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PhoneNumber.cs">PhoneNumber.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomException.cs">CustomException.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Entity.cs">Entity.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Extensions.cs">Extensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValueObject.cs">ValueObject.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Identity" TargetFolderName="Identity">
+        <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Using.cs">Using.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

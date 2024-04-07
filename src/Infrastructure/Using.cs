@@ -1,0 +1,10 @@
+global using Application.Common.Abstract;
+global using Domain.Common;
+global using Domain.Common.ValueObjects;
+global using Domain.Identity;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+global using Microsoft.Extensions.Configuration;

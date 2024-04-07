@@ -1,0 +1,39 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Presentation</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Presentation</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Presentation.csproj" File="Presentation.csproj" ReplaceParameters="true">
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AuthController.cs">AuthController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsersController.cs">UsersController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="DependencyRegistration" TargetFolderName="DependencyRegistration">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Authorization.cs">Authorization.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Registeration.cs">Registeration.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SerilogUI.cs">SerilogUI.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Swagger.cs">Swagger.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Filters" TargetFolderName="Filters">
+        <ProjectItem ReplaceParameters="true" TargetFileName="LogAuthorizeFilter.cs">LogAuthorizeFilter.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Middleware" TargetFolderName="Middleware">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Configure.cs">Configure.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApiBaseController.cs">ApiBaseController.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Using.cs">Using.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

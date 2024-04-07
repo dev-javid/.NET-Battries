@@ -1,0 +1,57 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Battries Included</Name>
+        <Description>Create multi-project clean architecture solution for a .NET Web API</Description>
+        <Icon>Icon.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <SolutionFolder Name="database">
+                <ProjectTemplateLink ProjectName="Database">
+                    database\Database\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="src">
+                <ProjectTemplateLink ProjectName="Application">
+                    src\Application\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Domain">
+                    src\Domain\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Infrastructure">
+                    src\Infrastructure\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Presentation">
+                    src\Presentation\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <SolutionFolder Name="Host">
+                    <ProjectTemplateLink ProjectName="WebHost">
+                        src\WebHost\MyTemplate.vstemplate
+                    </ProjectTemplateLink>
+                </SolutionFolder>
+            </SolutionFolder>
+            <SolutionFolder Name="tests">
+                <ProjectTemplateLink ProjectName="Tests.Architecture">
+                    tests\Tests.Architecture\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Tests.Integration">
+                    tests\Tests.Integration\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Tests.Unit.Application">
+                    tests\Tests.Unit.Application\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Tests.Unit.Domain">
+                    tests\Tests.Unit.Domain\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Tests.Unit.Infrasructure">
+                    tests\Tests.Unit.Infrasructure\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="Tests.Unit.WebHost">
+                    tests\Tests.Unit.WebHost\MyTemplate.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

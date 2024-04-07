@@ -1,0 +1,73 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Application</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Application.csproj" File="Application.csproj" ReplaceParameters="true">
+      <Folder Name="Auth" TargetFolderName="Auth">
+        <Folder Name="Commands" TargetFolderName="Commands">
+          <Folder Name="RefreshToken" TargetFolderName="RefreshToken">
+            <ProjectItem ReplaceParameters="true" TargetFileName="RefreshTokenCommand.cs">RefreshTokenCommand.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="RefreshTokenValidator.cs">RefreshTokenValidator.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Signin" TargetFolderName="Signin">
+            <ProjectItem ReplaceParameters="true" TargetFileName="SigninCommand.cs">SigninCommand.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="SigninValidator.cs">SigninValidator.cs</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="JwtTokens.cs">JwtTokens.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Common" TargetFolderName="Common">
+        <Folder Name="Abstract" TargetFolderName="Abstract">
+          <ProjectItem ReplaceParameters="true" TargetFileName="CommandRequest.cs">CommandRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IAuthorizeRequest.cs">IAuthorizeRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ICurrentUser.cs">ICurrentUser.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IDateTime.cs">IDateTime.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IDbContext.cs">IDbContext.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IIdentityService.cs">IIdentityService.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IJwtService.cs">IJwtService.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PagedQuery.cs">PagedQuery.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Configuration" TargetFolderName="Configuration">
+          <ProjectItem ReplaceParameters="true" TargetFileName="JwtConfiguration.cs">JwtConfiguration.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Extensions" TargetFolderName="Extensions">
+          <ProjectItem ReplaceParameters="true" TargetFileName="QueryableExtensions.cs">QueryableExtensions.cs</ProjectItem>
+        </Folder>
+        <Folder Name="MediatRBehaviour" TargetFolderName="MediatRBehaviour">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AuthorizationBehaviour.cs">AuthorizationBehaviour.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="CommandBehaviour.cs">CommandBehaviour.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TrimmingBehaviour.cs">TrimmingBehaviour.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ValidationBehaviour.cs">ValidationBehaviour.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Users" TargetFolderName="Users">
+        <Folder Name="Commands" TargetFolderName="Commands">
+          <Folder Name="AddUser" TargetFolderName="AddUser">
+            <ProjectItem ReplaceParameters="true" TargetFileName="AddUserCommand.cs">AddUserCommand.cs</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="Queries" TargetFolderName="Queries">
+          <Folder Name="GetUser" TargetFolderName="GetUser">
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetUsersQuery.cs">GetUsersQuery.cs</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DependencyRegistration.cs">DependencyRegistration.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GlobalSuppressions.cs">GlobalSuppressions.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Using.cs">Using.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
